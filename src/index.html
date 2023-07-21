@@ -1,20 +1,87 @@
-{% extends 'layout/layout.html' %}
+{% extends 'layout/layout.html' %} 
 
-{% block title %}
-Home
-{% endblock %}
+{% block title %} Home {% endblock %} 
 
-{% block header %}{% endblock %}
+{% block css %}<link rel="stylesheet" href="/css/index.css">{% endblock %}
 
-{% block content %}
-    <div id="container"></div>
+{% block header %}{% endblock %} {% block content %}
+<div id="bg">
+  <div class="scrollDist"></div>
+  <div class="main">
+    <svg viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+      <mask id="m">
+        <g class="cloud1">
+          <rect fill="#fff" width="100%" height="801" y="799" />
+          <image
+            xlink:href="https://assets.codepen.io/721952/cloud1Mask.jpg"
+            width="1200"
+            height="800"
+          />
+        </g>
+      </mask>
+      <image
+        class="sky"
+        xlink:href="/img/bg.png"
+        width="1200"
+        height="800"
+      />
+      <image
+        class="mountBg"
+        xlink:href="https://assets.codepen.io/721952/mountBg.png"
+        width="1200"
+        height="800"
+      />
+      <image
+        class="mountMg"
+        xlink:href="https://assets.codepen.io/721952/mountMg.png"
+        width="1200"
+        height="800"
+      />
+      <image
+        class="cloud2"
+        xlink:href="https://assets.codepen.io/721952/cloud2.png"
+        width="1200"
+        height="800"
+      />
+      <image
+        class="mountFg"
+        xlink:href="https://assets.codepen.io/721952/mountFg.png"
+        width="1200"
+        height="1000"
+      />
+      <image
+        class="cloud1"
+        xlink:href="https://assets.codepen.io/721952/cloud1.png"
+        width="1200"
+        height="800"
+      />
+      <image
+        class="cloud3"
+        xlink:href="https://assets.codepen.io/721952/cloud3.png"
+        width="1200"
+        height="950"
+      />
+      <text fill="#fff" x="50%" y="30%" text-anchor="middle">
+        
+      </text>
 
-    <section></section>
-
-{% endblock %}
-
-{% block footer %}{% endblock %}
-
-{% block script %}
-    
+      <g mask="url(#m)">
+        <rect fill="#fff" width="100%" height="100%" />
+        <text x="50%" y="30%" text-anchor="middle" fill="aliceblue">RAWSTONE</text>
+      </g>
+    </svg>
+  </div>
+</div>
+<section id="home">
+  <h1 class="fw-bold">開啟你的線上申辦之旅</h1>
+</section>
+<section id="product"><h1 class="fw-bold">開啟你的線上申辦之旅</h1></section>
+<section id="introduce"><h1 class="fw-bold">開啟你的線上申辦之旅</h1></section>
+<section id="about"><h1 class="fw-bold">開啟你的線上申辦之旅</h1></section>
+{% endblock %} {% block footer %}{% endblock %} {% block script %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script>
+<script src="/js/index.js"></script>
 {% endblock %}

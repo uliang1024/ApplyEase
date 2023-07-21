@@ -15,3 +15,25 @@ searchClose.addEventListener("click", function (event) {
   searchInput.value = "";
   event.stopPropagation();
 });
+
+const header = document.getElementById("header");
+
+function scrollAction() {
+  let scrollAmount = window.scrollY;
+
+  if (scrollAmount > 0) {
+    header.style.backgroundColor = "#0000005c";
+  } else {
+    header.style.backgroundColor = "transparent";
+  }
+}
+
+window.addEventListener("scroll", scrollAction);
+
+const navbarToggleExternalContent = document.getElementById("navbarToggleExternalContent");
+navbarToggleExternalContent.addEventListener('hidden.bs.collapse', event => {
+  header.style.backgroundColor = "transparent";
+})
+navbarToggleExternalContent.addEventListener('show.bs.collapse', event => {
+  header.style.backgroundColor = "#16295bdb";
+})

@@ -1,102 +1,42 @@
-/*
-three.js - Parallax Skybox
-*/
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".scrollDist",
+      start: "top top",
+      end: "bottom bottom",
+      scrub: 1,
+    },
+  })
+  .fromTo(".sky", { y: 0 }, { y: -100 }, 0)
+  .fromTo(".cloud1", { y: 100 }, { y: -800 }, 0)
+  .fromTo(".cloud2", { y: -150 }, { y: -500 }, 0)
+  .fromTo(".cloud3", { y: -50 }, { y: -650 }, 0)
+  .fromTo(".mountBg", { y: -10 }, { y: -100 }, 0)
+  .fromTo(".mountMg", { y: -30 }, { y: -250 }, 0)
+  .fromTo(".mountFg", { y: -50 }, { y: -600 }, 0);
 
-let img_base = "https://happy358.github.io/Images/HDR/sunny_vondelpark_4k.jpg";
+$("#arrowBtn").on("mouseenter", (e) => {
+  gsap.to(".arrow", {
+    y: 10,
+    duration: 0.8,
+    ease: "back.inOut(3)",
+    overwrite: "auto",
+  });
+});
 
-import * as THREE from 'three';
-(function () {
-  let camera, scene, renderer, skybox;
-  let height = 0;
+$("#arrowBtn").on("mouseleave", (e) => {
+  gsap.to(".arrow", {
+    y: 0,
+    duration: 0.5,
+    ease: "power3.out",
+    overwrite: "auto",
+  });
+});
 
-  init();
-  animate();
-
-  function init() {
-    const container = document.getElementById("container");
-
-    scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x101010);
-
-    const light = new THREE.AmbientLight(0xffffff, 3.3);
-    scene.add(light);
-
-    camera = new THREE.PerspectiveCamera(
-      70,
-      window.innerWidth / window.innerHeight,
-      1,
-      10
-    );
-    //camera.position.z = 3;// for debug
-    scene.add(camera);
-
-    // Create the panoramic sphere geometery
-    const panoSphereGeo = new THREE.SphereGeometry(8, 256, 256);
-
-    // Create the panoramic sphere material
-    const panoSphereMat = new THREE.MeshStandardMaterial({
-      side: THREE.BackSide,
-      displacementScale: -4.0,
-    });
-
-    // Create the panoramic sphere mesh
-    skybox = new THREE.Mesh(panoSphereGeo, panoSphereMat);
-
-    // Load and assign the texture and depth map
-    const manager = new THREE.LoadingManager();
-    const loader = new THREE.TextureLoader(manager);
-
-    loader.load(img_base, function (texture) {
-      texture.colorSpace = THREE.SRGBColorSpace;
-      texture.minFilter = THREE.NearestFilter;
-      texture.generateMipmaps = false;
-      skybox.material.map = texture;
-    });
-
-    // On load complete add the panoramic sphere to the scene
-    manager.onLoad = function () {
-      scene.add(skybox);
-    };
-
-    renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.useLegacyLights = false;
-
-    container.appendChild(renderer.domElement);
-
-    //
-    window.addEventListener("resize", onWindowResize);
-    //
-
-    height = document.body.clientHeight;
-    height -= window.innerHeight;
-    window.addEventListener("scroll", scrollAction);
-  }
-  function scrollAction() {
-    let scrollAmount = window.pageYOffset;
-    scrollAmount = scrollAmount / height;
-    scrollAmount *= Math.PI * 2;
-    skybox.rotation.y = scrollAmount;
-
-    skybox.position.y = Math.sin(scrollAmount * 2);
-    skybox.position.x = Math.sin(scrollAmount * 2) * 2;
-  }
-  function onWindowResize() {
-    height = document.body.clientHeight;
-    height -= window.innerHeight;
-
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-  }
-
-  function animate() {
-    requestAnimationFrame(animate);
-    render();
-  }
-
-  function render() {
-    renderer.render(scene, camera);
-  }
-})();
+$("#arrowBtn").on("click", (e) => {
+  gsap.to(window, {
+    scrollTo: innerHeight,
+    duration: 0.1,
+    ease: "power1.inOut",
+  });
+});

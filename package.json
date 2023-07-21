@@ -9,15 +9,19 @@
     "prod": "npm run production",
     "production": "cross-env NODE_ENV=production gulp --gulpfile=build/build.js",
     "watch": "npm run development && gulp watch --gulpfile=build/build.js",
-    "flow": "flow"
+    "flow": "flow",
+    "build": "babel assets/js/index.js -o assets/js/bundle.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.22.9",
     "@babel/core": "^7.22.9",
-    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-env": "^7.22.9",
     "@babel/preset-flow": "^7.8.3",
+    "@babel/preset-react": "^7.22.5",
+    "babel-cli": "^6.26.0",
     "babel-eslint": "^10.0.3",
     "browser-sync": "^2.29.0",
     "browser-sync-ui": "^2.29.0",
