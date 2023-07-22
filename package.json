@@ -2,15 +2,13 @@
   "name": "applyease",
   "version": "1.1.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "dev": "npm run development",
     "development": "cross-env NODE_ENV=development gulp --gulpfile=build/build.js",
     "prod": "npm run production",
     "production": "cross-env NODE_ENV=production gulp --gulpfile=build/build.js",
     "watch": "npm run development && gulp watch --gulpfile=build/build.js",
-    "flow": "flow",
-    "build": "babel assets/js/index.js -o assets/js/bundle.js"
+    "flow": "flow"
   },
   "keywords": [],
   "author": "",
