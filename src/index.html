@@ -1,12 +1,11 @@
-{% extends 'layout/layout.html' %} {% block title %} Home {% endblock %} 
-{% block css %}
-  <link rel="stylesheet" href="/css/index.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
-  />
-  {% endblock %}
-{% block header %}{% endblock %} {% block content %}
+{% extends 'layout/layout.html' %} {% block title %} Home {% endblock %} {%
+block css %}
+<link rel="stylesheet" href="/css/index.css" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+/>
+{% endblock %} {% block header %}{% endblock %} {% block content %}
 <div id="bg">
   <div class="scrollDist"></div>
   <div class="main">
@@ -76,11 +75,64 @@
     </h1>
     <p><span id="holder"></span><span class="blinking-cursor">|</span></p>
   </div>
-  <a href="#product" class="position-absolute w-100" style="bottom: 20px;">
-    <i id="moveDown" class="fa fa-chevron-down fa-3x bounce" style="color: #ff6363;"></i>
+  <a href="#product" class="position-absolute w-100" style="bottom: 20px">
+    <i
+      id="moveDown"
+      class="fa fa-chevron-down fa-3x bounce"
+      style="color: #ff6363"
+    ></i>
   </a>
 </section>
-<section id="product"><h1 class="fw-bold"></h1></section>
+<section id="product">
+  <div class="container text-center">
+    <h1 class="heading">線上申辦服務</h1>
+    <p>將滑鼠懸停在卡片上即可翻轉。</p>
+    <div class="row align-items-start">
+      <div class="col-md-4 p-0">
+        <a class="card" href="#!">
+          <div class="front" style="background-image: url(/img/indexCard1.jpeg)">
+            <p>信用卡申辦</p>
+          </div>
+          <div class="back">
+            <div>
+              <p>即刻獲得信用卡的便利與特惠</p>
+              <p>多樣化的信用卡選擇，讓您享受無限優惠與方便消費</p>
+              <button class="button">立即申辦</button>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4 p-0">
+        <a class="card" href="#!">
+          <div class="front" style="background-image: url(/img/indexCard2.jpeg)">
+            <p>線上開戶</p>
+          </div>
+          <div class="back">
+            <div>
+              <p>全線上流程，輕鬆開設個人帳戶</p>
+              <p>無需親自前往分行，即可完成開戶手續，省時又方便</p>
+              <button class="button">立即申辦</button>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4 p-0">
+        <a class="card" href="#!">
+          <div class="front" style="background-image: url(/img/indexCard3.jpg)">
+            <p>貸款申辦</p>
+          </div>
+          <div class="back">
+            <div>
+              <p>快速簡便的貸款申請流程</p>
+              <p>提供彈性的還款選項，讓您輕鬆實現資金需求</p>
+              <button class="button">立即申辦</button>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 <section id="introduce"><h1 class="fw-bold"></h1></section>
 <section id="about"><h1 class="fw-bold"></h1></section>
 {% endblock %} {% block footer %}{% endblock %} {% block script %}
