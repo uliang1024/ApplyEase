@@ -27,6 +27,7 @@
   border-left: 3px solid #015387;
   height: 18px;
   line-height: 20px;
+  padding-left: 0.5em;
 }
 
 .tabs {
@@ -135,9 +136,7 @@ input[id="radio-3"]:checked ~ .glider {
   align-items: center;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
+input[type="text"] {
   width: 100%;
   display: block;
   padding: 0.5em;
@@ -165,9 +164,24 @@ input[type="password"] {
   transform: translateY(-30px);
 }
 
+.msg_alert.show {
+  display: block;
+}
+
+.msg_alert {
+  color: red;
+  font-size: 14px;
+  position: relative;
+  flex-grow: 1;
+}
+
+.msg_alert {
+  display: none;
+}
+
 input[type="submit"] {
-  background: #76b852;
-  border: 1px solid #76b852;
+  background: #015387;
+  border: #015387;
   padding: 0.9em;
   width: 100%;
   margin: 1em 0;
@@ -177,7 +191,30 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   transition: 0.5s all;
-  background: #8dc26f;
+  background: #006eb2;
+}
+
+input[type="submit"].disable {
+  background-color: #6ec1e4;
+  cursor: not-allowed;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(5px);
+  }
 }
 
 #stars {
