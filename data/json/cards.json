@@ -27,6 +27,32 @@
   ],
   "MasterCard": [
     {
+      "src": "/img/MasterCard-1.png",
+      "alt": "Raw Stone 黑金"
+    },
+    {
+      "src": "/img/MasterCard-2.png",
+      "alt": "Raw Stone 石灰"
+    },
+    {
+      "src": "/img/MasterCard-3.png",
+      "alt": "Raw Stone 銀石"
+    },
+    {
+      "src": "/img/MasterCard-4.png",
+      "alt": "Raw Stone 珍白"
+    },
+    {
+      "src": "/img/MasterCard-5.png",
+      "alt": "Raw Stone 柔棕"
+    },
+    {
+      "src": "/img/MasterCard-6.png",
+      "alt": "Raw Stone 灰海"
+    }
+  ],
+  "JCB": [
+    {
       "src": "/img/card_alex.png",
       "alt": "卡片7"
     },
@@ -37,20 +63,6 @@
     {
       "src": "/img/card_alex.png",
       "alt": "卡片9"
-    }
-  ],
-  "JCB": [
-    {
-      "src": "/img/card4.png",
-      "alt": "卡片4"
-    },
-    {
-      "src": "/img/card5.png",
-      "alt": "卡片5"
-    },
-    {
-      "src": "/img/card6.png",
-      "alt": "卡片6"
     }
   ]
 }
