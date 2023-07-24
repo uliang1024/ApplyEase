@@ -35,7 +35,10 @@ endblock %} {% block css %}
         <i class="fa-solid fa-circle-exclamation"></i> 年滿 20
         歲以及穩定收入。</span
       >
+
       <h5 class="my-3 fw-bolder text-info">請輸入以下資訊</h5>
+
+      <hr />
 
       <form id="myForm" action="#" method="post">
         <div class="borleft">卡片品牌</div>
@@ -144,6 +147,7 @@ endblock %} {% block css %}
         <span id="captcha-alert" class="mb-1 msg_alert">驗證碼錯誤</span>
 
         <div class="mt-5">
+          <hr />
           <p class="text-danger">
             <img src="https://ob.ctbcbank.com/card/img/wen-red.png" alt="" />
             請務必點擊以下事項與條款，並詳閱相關內容，以確保自身權益。
@@ -167,7 +171,7 @@ endblock %} {% block css %}
                   ><a class="pointer"
                     ><span class="person">信用卡申請同意聲明事項</span></a
                   ><!----></span
-                ><span>，並同意其條款。(未勾選恕無法申請)</span
+                ><span>，並同意其條款。</span
                 ><span
                   class="mb-1 reqtxt msg_alert dinb cc_cursor show"
                   style="display: none"
@@ -185,7 +189,7 @@ endblock %} {% block css %}
                       >聯名卡暨儲值卡功能同意條款及聲明事項</span
                     ></a
                   ><!----></span
-                ><span>，並同意其條款。(未勾選恕無法申請)</span
+                ><span>，並同意其條款。</span
                 ><span
                   class="mb-1 reqtxt msg_alert dinb cc_cursor show"
                   style="display: none"
@@ -201,7 +205,7 @@ endblock %} {% block css %}
                   ><a class="pointer"
                     ><span class="person">儲值卡同意條款</span></a
                   ><!----></span
-                ><span>，並同意其條款。(未勾選恕無法申請)</span
+                ><span>，並同意其條款。</span
                 ><span
                   class="mb-1 reqtxt msg_alert dinb cc_cursor show"
                   style="display: none"
@@ -219,7 +223,7 @@ endblock %} {% block css %}
                       >個人網路銀行暨行動銀行服務條款</span
                     ></a
                   ><!----></span
-                ><span>，並同意其條款。(未勾選恕無法申請)</span
+                ><span>，並同意其條款。</span
                 ><span
                   class="mb-1 reqtxt msg_alert dinb cc_cursor show"
                   style="display: none"
@@ -234,12 +238,7 @@ endblock %} {% block css %}
                 ><span
                   ><a class="pointer"><span class="person">個資法條款</span></a
                   ><!----></span
-                ><span>，並同意其條款。(未勾選恕無法申請)</span
-                ><span
-                  class="mb-1 reqtxt msg_alert dinb cc_cursor show"
-                  style="display: none"
-                  >(若未勾選，恕無法申請)</span
-                >
+                ><span>，並同意其條款。</span>
               </div>
             </div>
             <div class="d-flex">
@@ -251,7 +250,7 @@ endblock %} {% block css %}
                     ><span class="person">同意降等條款</span></a
                   ><!----></span
                 ><span
-                  >貴行於本人無法獲發所申請等級卡片時，得改核發次等級卡片。(未勾選視為不同意)</span
+                  >貴行於本人無法獲發所申請等級卡片時，得改核發次等級卡片。</span
                 ><!---->
               </div>
             </div>
@@ -265,7 +264,7 @@ endblock %} {% block css %}
                   ><!----></span
                 ><span
                   >，後續如未能完成申請，
-                  貴行得依本人本次提供之聯絡電話，指派專人來電服務。(未勾選視為不同意)</span
+                  貴行得依本人本次提供之聯絡電話，指派專人來電服務。</span
                 ><!---->
               </div>
             </div>
@@ -273,7 +272,7 @@ endblock %} {% block css %}
               <div class="me-1"><input type="checkbox" value="7" /></div>
               <div>
                 <span
-                  >本人同意貴行於核卡後發送簡訊通知，提供本人預借現金密碼設定之相關說明。(若無勾選則視為不同意)</span
+                  >本人同意貴行於核卡後發送簡訊通知，提供本人預借現金密碼設定之相關說明。</span
                 ><span
                   ><a class="pointer"><span class="person"> </span></a
                   ><!----></span
@@ -282,8 +281,14 @@ endblock %} {% block css %}
               </div>
             </div>
           </div>
+          <hr />
         </div>
-        <input id="disabledLink" type="submit" class="btn_area disable" value="下一步" />
+        <input
+          id="disabledLink"
+          type="submit"
+          class="btn_area disable"
+          value="下一步"
+        />
       </form>
     </div>
   </div>

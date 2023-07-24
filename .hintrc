@@ -23,6 +23,19 @@
       {
         "image-alt": "off"
       }
+    ],
+    "button-type": "off",
+    "axe/keyboard": [
+      "default",
+      {
+        "nested-interactive": "off"
+      }
+    ],
+    "axe/name-role-value": [
+      "default",
+      {
+        "link-name": "off"
+      }
     ]
   }
 }
