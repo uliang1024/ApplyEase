@@ -53,16 +53,28 @@
   ],
   "JCB": [
     {
-      "src": "/img/card_alex.png",
-      "alt": "卡片7"
+      "src": "/img/jcb-1.png",
+      "alt": "Raw Stone 翠綠神秘之門"
     },
     {
-      "src": "/img/card_alex.png",
-      "alt": "卡片8"
+      "src": "/img/jcb-2.png",
+      "alt": "Raw Stone 青靛夢幻航線"
     },
     {
-      "src": "/img/card_alex.png",
-      "alt": "卡片9"
+      "src": "/img/jcb-3.png",
+      "alt": "Raw Stone 藍海星辰之旅"
+    },
+    {
+      "src": "/img/jcb-4.png",
+      "alt": "Raw Stone 碧空征服者"
+    },
+    {
+      "src": "/img/jcb-5.png",
+      "alt": "Raw Stone 紫光魔法境界"
+    },
+    {
+      "src": "/img/jcb-6.png",
+      "alt": "Raw Stone 橘色驚喜奇遇"
     }
   ]
 }
