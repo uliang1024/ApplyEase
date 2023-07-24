@@ -58,7 +58,6 @@ gulp.task('watch', function () {
       baseDir: '../public',
       index: 'index.html'
     },
-    port: 3000,
     callbacks: {
       ready: function (err, bs) {
         bs.addMiddleware("*", function (req, res, next) {

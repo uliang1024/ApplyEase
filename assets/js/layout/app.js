@@ -30,19 +30,17 @@ window.addEventListener("scroll", () => {
   }
 });
 
-window.addEventListener("scroll", scrollAction);
-
 const navbarToggleExternalContent = document.getElementById(
   "navbarToggleExternalContent"
 );
-navbarToggleExternalContent.addEventListener("hidden.bs.collapse", (event) => {
+navbarToggleExternalContent.addEventListener("hidden.bs.collapse", () => {
   header.style.backgroundColor = "transparent";
 });
-navbarToggleExternalContent.addEventListener("show.bs.collapse", (event) => {
+navbarToggleExternalContent.addEventListener("show.bs.collapse", () => {
   header.style.backgroundColor = "#16295bdb";
 });
 
-goTopBtn.addEventListener("click", function (e) {
+goTop.addEventListener("click", function (e) {
   e.preventDefault();
   window.scrollTo({
     top: 0,

@@ -1,0 +1,126 @@
+{% extends 'layout/card.html' %} {% block title %} 景承科技信用卡線上申請 {%
+endblock %} {% block css %}
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css"
+/>
+<link rel="stylesheet" href="/css/card-apply.css" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+/>
+{% endblock %} {% block header %}{% endblock %} {% block content %}
+<div id="stars">
+  <div id="star"></div>
+  <div id="star2"></div>
+  <div id="star3"></div>
+</div>
+
+<div class="wrapper">
+  <h1 class="mt-5">信用卡</h1>
+  <h2>線上申請</h2>
+  <div class="main-agileinfo container">
+    <div class="agileits-top">
+      <p class="condition text-primary-emphasis">申請條件說明</p>
+      <span>
+        <i class="fa-solid fa-circle-exclamation"></i>
+        僅限本國人正卡申請。</span
+      >
+      <br />
+      <span>
+        <i class="fa-solid fa-circle-exclamation"></i> 年滿 20
+        歲以及穩定收入。</span
+      >
+      <h5 class="my-3 fw-bolder text-info">請輸入以下資訊</h5>
+
+      <form action="#" method="post">
+
+        <div class="borleft px-2">卡片品牌</div>
+
+        <div class="card-type">
+          <div class="tabs">
+            <input type="radio" id="radio-1" name="tabs" checked />
+            <label class="tab" for="radio-1">VISA</label>
+            <input type="radio" id="radio-2" name="tabs" />
+            <label class="tab" for="radio-2">MasterCard</label>
+            <input type="radio" id="radio-3" name="tabs" />
+            <label class="tab" for="radio-3">JCB</label>
+            <span class="glider"></span>
+          </div>
+        </div>
+
+        <div id="card-show" class="sliders w-100 py-2">
+          <div class="slider slider-for">
+            {% for card in cards.VISA %}
+            <div>
+              <div class="ratio ratio-16x9">
+                <img
+                  src="{{ card.src }}"
+                  class="img-fluid rounded mx-auto d-block h-100"
+                  alt="{{ card.alt }}"
+                />
+              </div>
+              <h5 class="text-center pt-3">{{ card.alt }}</h5>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault{{ loop.index }}"
+                />
+                <label
+                  class="form-check-label"
+                  for="flexRadioDefault{{ loop.index }}"
+                  >選擇此卡</label
+                >
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          <div class="slider slider-nav">
+            {% for card in cards.VISA %}
+            <div class="card" style="width: 18rem">
+              <div class="ratio ratio-16x9">
+                <img
+                  src="{{ card.src }}"
+                  class="img-fluid rounded mx-auto d-block h-100"
+                  alt=""
+                />
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <input
+          class="text"
+          type="text"
+          name="Username"
+          placeholder="Username"
+          required=""
+        />
+        <input
+          class="text email"
+          type="email"
+          name="email"
+          placeholder="Email"
+          required=""
+        />
+        <div class="wthree-text">
+          <label class="anim">
+            <input type="checkbox" class="checkbox" required="" />
+            <span>I Agree To The Terms & Conditions</span>
+          </label>
+        </div>
+        <input type="submit" value="下一步" />
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %} {% block footer %}{% endblock %} {% block script %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script type="module" src="/js/card-apply.js"></script>
+{% endblock %}
