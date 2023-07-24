@@ -1,0 +1,44 @@
+{
+  "VISA": [
+    {
+      "src": "/img/card1.jpg",
+      "alt": "卡片1"
+    },
+    {
+      "src": "/img/card2.jpg",
+      "alt": "卡片2"
+    },
+    {
+      "src": "/img/card3.jpg",
+      "alt": "卡片3"
+    }
+  ],
+  "MasterCard": [
+    {
+      "src": "/img/card1.jpg",
+      "alt": "卡片1"
+    },
+    {
+      "src": "/img/card2.jpg",
+      "alt": "卡片2"
+    },
+    {
+      "src": "/img/card3.jpg",
+      "alt": "卡片3"
+    }
+  ],
+  "JCB": [
+    {
+      "src": "/img/card4.png",
+      "alt": "卡片4"
+    },
+    {
+      "src": "/img/card5.png",
+      "alt": "卡片5"
+    },
+    {
+      "src": "/img/card6.png",
+      "alt": "卡片6"
+    }
+  ]
+}
