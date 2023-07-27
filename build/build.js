@@ -21,7 +21,6 @@ gulp.task('sass:lint', require('./tasks/sass/lint'));
 /* JavaScript Tasks */
 gulp.task('javascript:build', require('./tasks/javascript/build'));
 gulp.task('javascript:clean', require('./tasks/javascript/clean'));
-gulp.task('javascript:lint', require('./tasks/javascript/lint'));
 
 /* Font Tasks */
 gulp.task('font:build', require('./tasks/font/build'));
@@ -41,7 +40,7 @@ gulp.task('static:copy', function () {
 gulp.task('html', gulp.series('html:clean', 'html:build'));
 gulp.task("markdown", gulp.series("markdown:build"));
 gulp.task('sass', gulp.series('sass:clean', 'sass:lint', 'sass:build'));
-gulp.task('javascript', gulp.series('javascript:clean', 'javascript:lint', 'javascript:build'));
+gulp.task('javascript', gulp.series('javascript:clean', 'javascript:build'));
 gulp.task('font', gulp.series('font:clean', 'font:build'));
 gulp.task('image', gulp.series('image:clean', 'image:build'));
 gulp.task('static', gulp.series('static:copy'));

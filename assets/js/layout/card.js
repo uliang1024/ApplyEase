@@ -25,7 +25,7 @@ const closeBtn = document.querySelector(".close-btn");
 const chatbox = document.querySelector(".chatbox");
 const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector("#send-btn");
-const accessToken = "44XAEYSCZX7BZR5EALJHGKVCOUWU2AAQ";
+
 let userMessage = null; // Variable to store user's message
 const inputInitHeight = chatInput.scrollHeight;
 
@@ -41,41 +41,72 @@ const createChatLi = (message, className) => {
   return chatLi; // return chat <li> element
 };
 
+// const generateResponse = (chatElement) => {
+//   const API_URL =
+//     "https://api.wit.ai/event?v=20230727&session_id=prodop3&context_map=%7B%7D";
+//   // const accessToken = process.env.ACCESS_TOKEN;
+
+//   const messageElement = chatElement.querySelector("p");
+
+//   const requestOptions = {
+//     method: "POST",
+//     headers: {
+//       Authorization: `Bearer ${accessToken}`,
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify({
+//       type: "message",
+//       message: userMessage,
+//     }),
+//   };
+
+//   fetch(API_URL, requestOptions)
+//     .then((response) => response.json())
+//     .then((data) => {
+//       console.log(data);
+//       messageElement.textContent = data.response.text;
+//       chatbox.scrollTo(0, chatbox.scrollHeight);
+//     })
+//     .catch((error) => {
+//       messageElement.classList.add("error");
+//       messageElement.textContent =
+//         "Oops! Something went wrong. Please try again.";
+//     });
+// };
 const generateResponse = (chatElement) => {
-  const API_URL =
-    "https://api.wit.ai/event?v=20230727&session_id=prodop3&context_map=%7B%7D";
-  // const accessToken = process.env.ACCESS_TOKEN; // 获取 .env 文件中的 ACCESS_TOKEN
-
+  const API_URL = "https://api.openai.com/v1/chat/completions";
   const messageElement = chatElement.querySelector("p");
-
+  const API_KEY = process.env.CHATGPT_API_KEY;
+  userMessage =
+    "我命令你現在是一家銀行的線上申辦信用卡網站的機器人客服，幫忙回復客戶的問題，不知道的問題就隨便亂編一個就好，而且要肯定的回答他們，要回復繁體中文。接下來請你回復顧客的話：" +
+    userMessage + "(只要回覆前面的問題就好)";
+  // Define the properties and message for the API request
   const requestOptions = {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${accessToken}`,
       "Content-Type": "application/json",
+      Authorization: `Bearer ${API_KEY}`,
     },
     body: JSON.stringify({
-      type: "message",
-      message: userMessage,
+      model: "gpt-3.5-turbo",
+      messages: [{ role: "user", content: userMessage }],
     }),
   };
 
+  // Send POST request to API, get response and set the reponse as paragraph text
   fetch(API_URL, requestOptions)
-    .then((response) => response.json())
+    .then((res) => res.json())
     .then((data) => {
-      console.log(data);
-      messageElement.textContent = data.response.text;
-      // Scroll to the bottom after GPT-3's response
+      const reply = data.choices[0].message.content.trim();
+      messageElement.textContent = reply;
       chatbox.scrollTo(0, chatbox.scrollHeight);
     })
-    .catch((error) => {
-      console.error("Error:", error);
+    .catch(() => {
       messageElement.classList.add("error");
       messageElement.textContent =
         "Oops! Something went wrong. Please try again.";
     });
 };
-
 const handleChat = () => {
   userMessage = chatInput.value.trim(); // Get user entered message and remove extra whitespace
   if (!userMessage) return;
