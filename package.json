@@ -25,6 +25,7 @@
     "browser-sync-ui": "^2.29.0",
     "cross-env": "^5.2.1",
     "del": "^4.1.1",
+    "dotenv": "^16.3.1",
     "eslint-plugin-compat": "^3.8.0",
     "flow-bin": "^0.102.0",
     "gulp": "^4.0.2",
