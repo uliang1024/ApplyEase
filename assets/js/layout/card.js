@@ -77,7 +77,6 @@ const createChatLi = (message, className) => {
 const generateResponse = (chatElement) => {
   const API_URL = "https://api.openai.com/v1/chat/completions";
   const messageElement = chatElement.querySelector("p");
-  const API_KEY = process.env.CHATGPT_API_KEY;
 
   userMessage =
     "我命令你現在是一家叫作RawStone的公司的線上申辦信用卡網站的機器人客服，幫忙回復客戶的問題，不知道的問題就隨便亂編一個就好，而且要肯定的回答他們，要回復繁體中文。接下來請你回復顧客的話：" +
