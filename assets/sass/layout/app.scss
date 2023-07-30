@@ -152,6 +152,27 @@ body {
   top: 18px;
 }
 
+.line-btn {
+  display: inline-block;
+  background-image: url(/img/btn_login_base.png);
+  width: 151px;
+  height: 44px;
+  border: none;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.line-btn:hover {
+  background-image: url(/img/btn_login_hover.png);
+}
+
+.line-btn:active {
+  background-image: url(/img/btn_login_press.png);
+}
+
 .goTop {
   position: fixed;
   right: 10px;
