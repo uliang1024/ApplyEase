@@ -47,3 +47,19 @@ goTop.addEventListener("click", function (e) {
     behavior: "smooth",
   });
 });
+
+// ---
+
+const lineBtn = document.querySelector(".line-btn");
+
+lineBtn.addEventListener("click", function () {
+  let client_id = "2000265290";
+  let redirect_uri = "https://apply-ease.vercel.app/";
+  let link = "https://access.line.me/oauth2/v2.1/authorize?";
+  link += "response_type=code";
+  link += "&client_id=" + client_id;
+  link += "&redirect_uri=" + redirect_uri;
+  link += "&state=login";
+  link += "&scope=openid%20profile";
+  window.location.href = link;
+});

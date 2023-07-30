@@ -37,6 +37,12 @@ gulp.task('static:copy', function () {
     .pipe(gulp.dest('../public/'));
 });
 
+gulp.task("favicon", function () {
+  return gulp
+    .src("../favicon.ico") // 指定你的 favicon 圖示檔案路徑
+    .pipe(gulp.dest("../public/")); // 指定複製到的目標路徑
+});
+
 /* Domain Tasks */
 gulp.task('html', gulp.series('html:clean', 'html:build'));
 gulp.task("markdown", gulp.series("markdown:build"));
@@ -100,4 +106,4 @@ gulp.task('watch', function () {
     .on('error', message.error('WATCH: Static Assets'));
 });
 
-gulp.task('default', gulp.parallel('html', "markdown", 'sass', 'javascript', 'font', 'image', 'static'));
+gulp.task('default', gulp.parallel('html', "markdown", 'sass', 'javascript', 'font', 'image', 'static', 'favicon'));
