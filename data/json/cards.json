@@ -1,79 +1,79 @@
 {
   "VISA": [
     {
-      "src": "/img/visa-card-5.png",
+      "src": "/imgs/visa-card-5.png",
       "alt": "Raw Stone熾熱赤焰"
     },
     {
-      "src": "/img/visa-card-6.png",
+      "src": "/imgs/visa-card-6.png",
       "alt": "Raw Stone金色陽光"
     },
     {
-      "src": "/img/visa-card-2.png",
+      "src": "/imgs/visa-card-2.png",
       "alt": "Raw Stone翠綠春意"
     },
     {
-      "src": "/img/visa-card-1.png",
+      "src": "/imgs/visa-card-1.png",
       "alt": "Raw Stone晴空淺藍"
     },
     {
-      "src": "/img/visa-card-3.png",
+      "src": "/imgs/visa-card-3.png",
       "alt": "Raw Stone深海浪潮"
     },
     {
-      "src": "/img/visa-card-4.png",
+      "src": "/imgs/visa-card-4.png",
       "alt": "Raw Stone紫禁神秘"
     }
   ],
   "MasterCard": [
     {
-      "src": "/img/MasterCard-1.png",
+      "src": "/imgs/MasterCard-1.png",
       "alt": "Raw Stone 黑金"
     },
     {
-      "src": "/img/MasterCard-2.png",
+      "src": "/imgs/MasterCard-2.png",
       "alt": "Raw Stone 石灰"
     },
     {
-      "src": "/img/MasterCard-3.png",
+      "src": "/imgs/MasterCard-3.png",
       "alt": "Raw Stone 銀石"
     },
     {
-      "src": "/img/MasterCard-4.png",
+      "src": "/imgs/MasterCard-4.png",
       "alt": "Raw Stone 珍白"
     },
     {
-      "src": "/img/MasterCard-5.png",
+      "src": "/imgs/MasterCard-5.png",
       "alt": "Raw Stone 柔棕"
     },
     {
-      "src": "/img/MasterCard-6.png",
+      "src": "/imgs/MasterCard-6.png",
       "alt": "Raw Stone 灰海"
     }
   ],
   "JCB": [
     {
-      "src": "/img/jcb-1.png",
+      "src": "/imgs/jcb-1.png",
       "alt": "Raw Stone 翠綠神秘之門"
     },
     {
-      "src": "/img/jcb-2.png",
+      "src": "/imgs/jcb-2.png",
       "alt": "Raw Stone 青靛夢幻航線"
     },
     {
-      "src": "/img/jcb-3.png",
+      "src": "/imgs/jcb-3.png",
       "alt": "Raw Stone 藍海星辰之旅"
     },
     {
-      "src": "/img/jcb-4.png",
+      "src": "/imgs/jcb-4.png",
       "alt": "Raw Stone 碧空征服者"
     },
     {
-      "src": "/img/jcb-5.png",
+      "src": "/imgs/jcb-5.png",
       "alt": "Raw Stone 紫光魔法境界"
     },
     {
-      "src": "/img/jcb-6.png",
+      "src": "/imgs/jcb-6.png",
       "alt": "Raw Stone 橘色驚喜奇遇"
     }
   ]

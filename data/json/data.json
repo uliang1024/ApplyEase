@@ -1,8 +1,0 @@
-{
-    "frameworks": [
-        "Express.JS",
-        "Sails.js",
-        "Hapi.js",
-        "Nest.js"
-    ]
-}
